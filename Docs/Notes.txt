@@ -1,0 +1,26 @@
+Hello, I  am your notebook for the rest of college.
+
+Theory - Learning the information and understand it.
+Programing - Remembering what I learned and use it in problem solving.
+
+The Fayman technique:
+If you can put it down in your own words
+
+Its harder to fool yourself tbat you understand something, 
+when you sti down to write about it an dit comes out all disjointed and confused. 
+Writing forces clarity.
+
+Before the class{
+
+definition in my words:
+Code syntax:
+Examples or visualizations:
+Write questions:
+}
+
+During lecture{
+Add to your notes. Examples, lecture slides, etc.
+
+}
+
+Slow down to understand.
