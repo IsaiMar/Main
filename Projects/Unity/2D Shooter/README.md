@@ -9,7 +9,7 @@ This was my first Unity game and I made it to learn how to use Unity.
 
 You can watch a Demo of my game here:
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://www.youtube.com/watch?v=k2SycVNR-fw)
 
 # Development Environment
 
@@ -24,6 +24,7 @@ C#
 * [Download Unity](https://unity.com/download)
 * [Udemy](https://www.udemy.com/tutorial/unity-game-development-by-example/create-2d-target-shooting-game-in-1-hour/)
 * [Unity forums (for help)](https://forum.unity.com/)
+* [Piskel](https://www.piskelapp.com/download)
 
 # Future Work
 
