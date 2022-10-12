@@ -7,7 +7,7 @@ It is a fitness tracker, user inputs their meals and nutritions value and the ap
 I made this app to learn how to make web apps with react.
 
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://www.youtube.com/watch?v=CIl40jsOwKU)
 
 # Web Pages
 
