@@ -1,16 +1,22 @@
-import MyTable from "./FoodTable";
 import '../App.css';
-import { Box } from "@material-ui/core";
 import MyCalendar from "./MyCalendar";
 import FoodTable from "./FoodTable";
+import ExerciseTable from "../ExerciseTable";
 
 const Home = () => {
     return (
         // <Box>
             <div>
                 <MyCalendar />
-                <FoodTable />
-            </div>          
+                <div id="tables">
+                    <div className="table" id="food">
+                        <FoodTable />
+                    </div>
+                    <div className="table">
+                        <ExerciseTable />
+                    </div> 
+                </div>
+            </div>
         // </Box>
     )
 }

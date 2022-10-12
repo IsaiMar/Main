@@ -9,31 +9,32 @@ import Paper from '@mui/material/Paper';
 
 function createData(
   name = "",
-  amount = 0,
-  calories = 0,
-  protein = 0
+  sets = 0,
+  reps = 0,
+  time = 0
+
 ) {
-  return { name, amount, calories, protein };
+  return { name, sets, reps, time };
 }
 
 const rows = [
   createData('Greek Yogurt', "1 cup", 159, 16.0),
-  createData('Chicken', "*", 237, 9.0,),
-  createData('Pasta', "*", 262, 16.0,),
-  createData('Eggs', "*", 305, 3.7,),
+  createData('Chicken', "*", 237, 9.0),
+  createData('Pasta', "*", 262, 16.0),
+  createData('Eggs', "*", 305, 3.7),
   createData('Protein shake', "*", 356, 16.0),
 ];
 
-export default function FoodTable() {
+export default function ExerciseTable() {
   return (
     <TableContainer component={Paper}>
       <Table aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Food</TableCell>
-            <TableCell align="right">Amount</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Protein</TableCell>
+            <TableCell>Exercise</TableCell>
+            <TableCell align="right">Sets</TableCell>
+            <TableCell align="right">Reps</TableCell>
+            <TableCell align="right">Time</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -45,9 +46,9 @@ export default function FoodTable() {
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.amount}</TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="right">{row.sets}</TableCell>
+              <TableCell align="right">{row.reps}</TableCell>
+              <TableCell align="right">{row.time}</TableCell>
             </TableRow>
           ))}
         </TableBody>

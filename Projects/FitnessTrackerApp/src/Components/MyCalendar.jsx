@@ -5,12 +5,6 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
 
-const isWeekend = (date) => {
-  const day = date.day();
-
-  return day === 0 || day === 6;
-};
-
 export default function MyCalendar() {
   const [value, setValue] = React.useState(dayjs(new Date()));
 

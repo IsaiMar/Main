@@ -39,5 +39,23 @@
 
 .size {
   width: "50%";
+}
 
+#tables{
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 40px
+}
+
+.table{
+  padding: 50px;
+  font-size: 50px;
+}
+
+.Table-Head{
+  font-size: 50px;
+}
+
+#Header {
+  background-color:#264653dc;
 }
