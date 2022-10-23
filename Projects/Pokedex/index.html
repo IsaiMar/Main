@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokedex</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="https://www.pokemon.com/us/pokemon-news">PokeNews</a>
+            <a href="https://www.pokemoncenter.com/">Pokemon Center</a>
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+    </div>
+
+    <main>
+        <img id="title">
+        <div id="intro">
+            <h2>Welcome! find your favorite pokemons from Generation one.</h2>
+            <h3>Search by</h3>
+            <select name="byWhat" id="byWhat">
+                <!-- <option value="a-z">a-z</option> -->
+                <option value="Type">Type</option>
+                <!-- <option value="Letter">First letter</option> -->
+            <input id="search">
+            <button id="search-button">search</button>
+        </div>
+        <div class="poke-container" id="poke-container">
+    </main>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="pokemonImg">
+        <div id="Stats"></div>
+    </div>
+
+    <footer>
+        <h3>Pokedex &copy; 2022 - Isai Mar</h3>
+        <h3><a href="#">Contact Us</a></h3>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="fb icon">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="twitter icon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="instagram icon">
+            </a>
+        </div>
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

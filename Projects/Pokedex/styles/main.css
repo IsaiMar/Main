@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+
+#output h2 {
+    font-size: 3em;
+    color: darkgreen;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+float: left;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+background-color: #04AA6D;
+color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+display: none;
+}
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+.topnav a:not(:first-child) {display: none;}
+.topnav a.icon {
+    float: right;
+    display: block;
+}
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+.topnav.responsive {position: relative;}
+.topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+}
+}
+
+* {
+box-sizing: border-box;
+}
+
+body{
+    background-color: #a01c1c;
+    font-family: 'Lato', sans-serif;
+
+}
+main {
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 2rem;
+    letter-spacing: 3px;
+}
+
+#title {
+    padding: 3%;
+}
+
+#intro{
+    display: grid;
+    grid-template-columns: 100px 70px 250px 80px auto;
+    grid-template-rows: auto 30px;
+}
+
+#intro h2{
+    grid-column: 1/6;
+    grid-row: 1/2;
+    /* font-size: 18px; */
+}
+
+#intro h3{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin:0;
+}
+#byWhat {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#search {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    width: 200px;
+    margin-left: 15px;
+
+}
+#search-button {
+    grid-column: 4/5;
+    grid-row: 2/3;
+    width: 80px;
+}
+
+.poke-container {
+    align-items: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-top: 30px;
+}
+
+
+.pokemon {
+    background-color: #eeeeee;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.pokemon:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+
+.pokemon .img-container {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    height: 100px;
+    text-align: center;
+    width: 100px;
+}
+
+.pokemon .img-container img {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.pokemon .info {
+    margin-top: 20px;
+}
+
+.pokemon .info .number {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 0.8em;
+    padding: 5px 10px;
+}
+
+.pokemon .info .name {
+    letter-spacing: 1px;
+    margin: 15px 0 7px;
+}
+
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+
+
+footer{
+    background-color: #264653; 
+    font-family: Verdana;
+    padding: 25px 50px;
+    margin-top: 100px; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer .social img {
+    padding-top: 15px;
+    margin-top: 100px;
+}
+footer h3{
+    color: #212944;
+}
+footer h3 a:hover{
+    text-decoration: underline;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    background-color: #3c6e81;
+    color: #e76f51;
+}
