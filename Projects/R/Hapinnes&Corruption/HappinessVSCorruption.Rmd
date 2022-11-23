@@ -9,8 +9,6 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(mosaic)
-library(car)
-library(ggplot2)
 happiness <- read.csv("C:/Users/isaig/Rstudio/Data2022.csv", header=TRUE)
 View(happiness)
 ```
