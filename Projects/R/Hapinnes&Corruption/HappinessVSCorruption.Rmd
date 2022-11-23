@@ -1,0 +1,67 @@
+---
+title: "Happiness and Corruption"
+author: "Isai Mar"
+date: "2022-11-23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(mosaic)
+library(car)
+library(ggplot2)
+happiness <- read.csv("C:/Users/isaig/Rstudio/Data2022.csv", header=TRUE)
+View(happiness)
+```
+
+# Happiness vs Corruption
+
+  Today I want to know if the perceived corruption in a country affects the happiness of the people living in that country.
+In this analysis I am using a dataset from kaggle (https://www.kaggle.com/datasets/whenamancodes/world-happiness-report) titled "World Happiness Report 2022". I will use the happiness score value in the dataset, this value was taken from a national survey where people score their happiness from 0 (unhappiest) to 10 (happiest). I will also use the perceived corruption value which was taken from a different national survey that goes from 0 (less corrupt) to 10 (more corrupt).
+
+  I first tested if the data is normally distributed using a histogram:
+
+```{r}
+#Testing the frequency of the scores in the Lifeladder and perceived corruption values.
+happiness_score <- happiness$Life_Ladder
+hist(happiness_score)
+
+corruption <- happiness$Perceptions_of_corruption
+hist(corruption)
+```
+
+  The histograms above reveal that the data is not normally distributed, so I decided to look at the date in two ways using an aov test and a linear regression.
+
+
+## AOV test
+
+My alpha level is 0.05.
+
+```{r}
+myaov <- aov(happiness_score~corruption,data=happiness)
+summary(myaov)
+
+```
+
+  The results show that my p value is lower than my alpha which means that there is correlation between happiness and perceived corruption.
+
+
+## Linear Regression
+
+
+```{r}
+mylm <- lm(happiness_score ~ corruption, data = happiness)
+summary(mylm)
+
+plot(happiness_score ~ corruption, data = happiness)
+abline(mylm)
+```
+
+  As we can observe in the plot, the a higher perceive corruption score correlates with a lower happiness score. 
+
+## Conclusion
+
+We can say that the corruption in a country does affect the happiness score of the people living in it. In further analysis we could test if the happiness score is correlated with other factors from the data set like freedom or GDP
+
+
