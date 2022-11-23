@@ -2,8 +2,10 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
+# This is an example of creating and naming a chatbot
 my_bot = ChatBot('Chatbot')
 
+# This is an example of how to train your bot
 list_trainer = ListTrainer(my_bot)
 small_talk = ['hi there',
               'hi!',
@@ -28,38 +30,16 @@ math_talk_2 = ['2+2',
                '4 ask me a harder one.']
 math_talk_3 = ['law of cosines',
                'c**2 = a**2 + b**2 - 2 * a * b * cos(gamma)']
-            
-list_trainer = ListTrainer(my_bot)
 
+# You can use this for each loop to train the chatbot in every of the things you want it to respond.
 for item in (small_talk, math_talk_1, math_talk_2, math_talk_3):
         list_trainer.train(item)
 
-name = "Bot Number 286" 
-monsoon = "rainy" 
-mood = "Smiley"
-resp = { 
-"what's your name?": [ 
-"They call me {0}".format(name), 
-"I usually go by {0}".format(name), 
-"My name is the {0}".format(name) ],
-"what's today's weather?": [ 
-"The weather is {0}".format(monsoon), 
-"It's {0} today".format(monsoon)], 
-"how are you?": [ 
-"I am feeling {0}".format(mood), 
-"{0}! How about you?".format(mood), 
-"I am {0}! How about yourself?".format(mood), ],
-"": [ 
-"Hey! Are you there?", 
-"What do you mean by these?", 
- ],
-"default": [
-"This is a default message"] }
-
+# This trains the chatbot with a library that chatterbot already has in github called "english".
 corpus_trainer = ChatterBotCorpusTrainer(my_bot)
 corpus_trainer.train('chatterbot.corpus.english')
 
-
+# This creates the environment to communicate with the chatbot.
 def conversation():
         while True:
                 user_input = input("Talk to me")
